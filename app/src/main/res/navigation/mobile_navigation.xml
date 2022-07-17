@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.doublej.jjfitnessapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_exercicios" />
+
+    <fragment
+        android:id="@+id/navigation_feed"
+        android:name="com.doublej.jjfitnessapp.ui.fragments.DashboardFragment"
+        android:label="@string/title_feed"
+        tools:layout="@layout/fragment_nutricao" />
+
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="com.doublej.jjfitnessapp.ui.fragments.DashboardFragment"
+        android:label="@string/title_Perfil"
+        tools:layout="@layout/fragment_nutricao" />
+    <fragment
+        android:id="@+id/navigation_definições"
+        android:name="com.doublej.jjfitnessapp.ui.fragments.DashboardFragment"
+        android:label="@string/title_Definições"
+        tools:layout="@layout/fragment_nutricao" />
+</navigation>

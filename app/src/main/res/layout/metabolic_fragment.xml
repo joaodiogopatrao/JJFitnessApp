@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    tools:context=".ui.fragments.MetabolicFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.12"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/metCalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat"
+            android:text="3170kcal"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/waveLoadingView3"
+            app:layout_constraintStart_toStartOf="@+id/waveLoadingView3"
+            app:layout_constraintTop_toBottomOf="@+id/waveLoadingView" />
+
+        <TextView
+            android:id="@+id/asdas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Calorias Recomendadas"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@+id/waveLoadingView2"
+            app:layout_constraintEnd_toEndOf="@+id/waveLoadingView3"
+            app:layout_constraintStart_toStartOf="@+id/waveLoadingView3" />
+
+        <View
+            android:id="@+id/view19"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="0.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Metabolismo Basal"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@+id/waveLoadingView"
+            app:layout_constraintEnd_toEndOf="@id/waveLoadingView"
+            app:layout_constraintStart_toStartOf="@+id/waveLoadingView" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Taxa Metabólica"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@+id/waveLoadingView2"
+            app:layout_constraintEnd_toEndOf="@+id/waveLoadingView2"
+            app:layout_constraintStart_toStartOf="@id/waveLoadingView2" />
+
+        <TextView
+            android:id="@+id/MetTaxaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat"
+            android:text="0kcal"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/waveLoadingView2"
+            app:layout_constraintStart_toStartOf="@id/waveLoadingView2"
+            app:layout_constraintTop_toBottomOf="@+id/waveLoadingView2" />
+
+        <TextView
+            android:id="@+id/MetBasalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat"
+            android:text="0kcal"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/waveLoadingView"
+            app:layout_constraintStart_toStartOf="@+id/waveLoadingView"
+            app:layout_constraintTop_toBottomOf="@+id/waveLoadingView" />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveLoadingView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="30dp"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/view15"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/waveLoadingView2"
+            app:layout_constraintTop_toBottomOf="@+id/view19"
+            app:layout_constraintWidth_percent="0.24"
+            app:wlv_borderColor="#4DFFFFFF"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="0"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenterColor="@android:color/white"
+            app:wlv_titleCenterSize="24sp"
+            app:wlv_titleCenterStrokeColor="#636363"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="40"
+            app:wlv_waveColor="#FFFFFF" />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveLoadingView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/view15"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view19"
+            app:layout_constraintWidth_percent="0.24"
+            app:wlv_borderColor="#4DFFFFFF"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="0"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenterColor="@android:color/white"
+            app:wlv_titleCenterSize="24sp"
+            app:wlv_titleCenterStrokeColor="#636363"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="40"
+            app:wlv_waveColor="#FFFFFF" />
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveLoadingView3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/view15"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@+id/waveLoadingView2"
+            app:layout_constraintTop_toBottomOf="@+id/view19"
+            app:layout_constraintWidth_percent="0.24"
+            app:wlv_borderColor="#4DFFFFFF"
+            app:wlv_borderWidth="2dp"
+            app:wlv_progressValue="0"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenterColor="@android:color/white"
+            app:wlv_titleCenterSize="24sp"
+            app:wlv_titleCenterStrokeColor="#636363"
+            app:wlv_titleCenterStrokeWidth="1dp"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="40"
+            app:wlv_waveColor="#FFFFFF" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

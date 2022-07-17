@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foodCardView"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="0dp"
+    android:outlineAmbientShadowColor="#A0A0A0"
+    android:outlineSpotShadowColor="#A0A0A0"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addFoodButton"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#8AE6A1"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/dragIcon"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView56"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/addpng" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/caloriesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Calorias: "
+            android:textColor="#C8C8C8"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView7"
+            app:layout_constraintTop_toBottomOf="@+id/foodName" />
+
+        <TextView
+            android:id="@+id/caloriesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/open_sans"
+            android:text="374kcal"
+            android:textColor="#424242"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/caloriesText"
+            app:layout_constraintStart_toEndOf="@+id/caloriesText"
+            app:layout_constraintTop_toTopOf="@+id/caloriesText" />
+
+        <TextView
+            android:id="@+id/proteinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Proteínas: "
+            android:textColor="#C8C8C8"
+            android:textSize="9sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView7"
+            app:layout_constraintTop_toBottomOf="@+id/caloriesText" />
+
+        <TextView
+            android:id="@+id/proteinValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/open_sans"
+            android:text="27g"
+            android:textColor="#424242"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/proteinText"
+            app:layout_constraintStart_toEndOf="@+id/proteinText"
+            app:layout_constraintTop_toTopOf="@+id/proteinText" />
+
+        <TextView
+            android:id="@+id/carbsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Carbohidratos: "
+            android:textColor="#C8C8C8"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/proteinText"
+            app:layout_constraintStart_toEndOf="@+id/proteinValue"
+            app:layout_constraintTop_toTopOf="@+id/proteinText" />
+
+        <TextView
+            android:id="@+id/carbsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/open_sans"
+            android:text="60g"
+            android:textColor="#424242"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/carbsText"
+            app:layout_constraintStart_toEndOf="@+id/carbsText"
+            app:layout_constraintTop_toTopOf="@+id/carbsText" />
+
+        <TextView
+            android:id="@+id/fatsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/open_sans"
+            android:text="Gorduras: "
+            android:textColor="#C8C8C8"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/carbsText"
+            app:layout_constraintStart_toEndOf="@+id/carbsValue"
+            app:layout_constraintTop_toTopOf="@+id/carbsText" />
+
+        <TextView
+            android:id="@+id/fatsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/open_sans"
+            android:text="80g"
+            android:textColor="#424242"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/fatsText"
+            app:layout_constraintStart_toEndOf="@+id/fatsText"
+            app:layout_constraintTop_toTopOf="@+id/fatsText" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dragIcon"
+            android:layout_width="7dp"
+            android:layout_height="match_parent"
+            android:outlineAmbientShadowColor="#FF00A4FF"
+            android:outlineSpotShadowColor="#FF00A4FF"
+            app:cardBackgroundColor="#8AE6A1"
+            app:cardCornerRadius="1dp"
+            app:cardElevation="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="0dp"
+            android:layout_height="98dp"
+            android:outlineAmbientShadowColor="#A0A0A0"
+            android:outlineSpotShadowColor="#A0A0A0"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.28">
+
+            <ImageView
+                android:id="@+id/foodImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.7"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:lineSpacingExtra="2sp"
+            android:text="Dumbell rows"
+            android:textColor="#424242"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/cardView7"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

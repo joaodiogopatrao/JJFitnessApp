@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@mipmap/running64"
+        android:title="Exercícios"/>
+    <item
+        android:id="@+id/ic_nutrition"
+        android:icon="@mipmap/bread64"
+        android:title="Nutrição"/>
+    <item
+        android:id="@+id/ic_calculators"
+        android:icon="@mipmap/compass364"
+        android:title="Calculadoras"/>
+    <item
+        android:id="@+id/ic_feed"
+        android:icon="@mipmap/group64"
+        android:title="Feed"/>
+
+</menu>

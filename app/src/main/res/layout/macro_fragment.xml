@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00F8F8F8"
+    tools:context=".ui.fragments.MacroFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <View
+            android:id="@+id/view14"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/proteinValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:alpha="0"
+            android:fontFamily="@font/montserrat"
+            android:text="0g"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/ProteinProgress"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toEndOf="@+id/ProteinProgress"
+            app:layout_constraintTop_toBottomOf="@+id/proteinText" />
+
+        <TextView
+            android:id="@+id/carbsValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:alpha="0"
+            android:fontFamily="@font/montserratres"
+            android:text="0g"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/CarbsProgress"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toEndOf="@+id/CarbsProgress"
+            app:layout_constraintTop_toBottomOf="@+id/Carbohidratos" />
+
+        <TextView
+            android:id="@+id/fatsValueText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:alpha="0"
+            android:fontFamily="@font/montserratres"
+            android:text="0g"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@+id/FatProgress1"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toEndOf="@+id/FatProgress1"
+            app:layout_constraintTop_toBottomOf="@+id/Gorduras" />
+
+        <TextView
+            android:id="@+id/proteinText"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:elevation="6dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Proteína"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/ProteinProgress"
+            app:layout_constraintEnd_toEndOf="@+id/ProteinProgress"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="@+id/ProteinProgress" />
+
+        <TextView
+            android:id="@+id/Carbohidratos"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:elevation="6dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Carbohidratos"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toTopOf="@+id/CarbsProgress"
+            app:layout_constraintEnd_toEndOf="@+id/CarbsProgress"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="@id/CarbsProgress" />
+
+        <TextView
+            android:id="@+id/Gorduras"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:elevation="6dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Gorduras"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="1sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintEnd_toEndOf="@+id/FatProgress1"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="@+id/FatProgress1"
+            app:layout_constraintTop_toBottomOf="@+id/CarbsProgress" />
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/ProteinProgress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:elevation="6dp"
+
+            app:layout_constraintBottom_toTopOf="@+id/Carbohidratos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.022"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent="0.65"
+            app:rpbAnimationLength="500"
+            app:rpbBackgroundColor="#80FFFFFF"
+            app:rpbBackgroundTextColor="@color/white"
+            app:rpbCornerRadius="5dp"
+            app:rpbProgress="20"
+            app:rpbProgressColor="#FFFFFF"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="false">
+
+        </com.mackhartley.roundedprogressbar.RoundedProgressBar>
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/CarbsProgress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="6dp"
+            app:layout_constraintBottom_toTopOf="@+id/view14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.022"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.65"
+            app:rpbAnimationLength="500"
+            app:rpbBackgroundColor="#80FFFFFF"
+            app:rpbBackgroundTextColor="@color/white"
+            app:rpbCornerRadius="5dp"
+            app:rpbProgress="20"
+            app:rpbProgressColor="#FFFFFF"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="false">
+
+        </com.mackhartley.roundedprogressbar.RoundedProgressBar>
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/FatProgress1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.022"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Gorduras"
+            app:layout_constraintWidth_percent="0.65"
+            app:rpbAnimationLength="500"
+            app:rpbBackgroundColor="#80FFFFFF"
+            app:rpbBackgroundTextColor="@color/white"
+            app:rpbCornerRadius="5dp"
+            app:rpbProgress="20"
+            app:rpbProgressColor="#FFFFFF"
+            app:rpbProgressTextColor="@color/white"
+            app:rpbShowProgressText="false">
+
+        </com.mackhartley.roundedprogressbar.RoundedProgressBar>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

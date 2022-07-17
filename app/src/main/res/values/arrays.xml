@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="activityOptions">
+        <item>Sedentário</item>
+        <item>Moderado</item>
+        <item>Ativo</item>
+        <item>Muito ativo</item>
+    </string-array>
+
+    <string-array name="exerciseOptions">
+        <item>Peito</item>
+        <item>Braço</item>
+        <item>Ombros</item>
+        <item>Costas</item>
+        <item>Corpo Inferior</item>
+    </string-array>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nutitionCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="7dp"
+    android:outlineAmbientShadowColor="#A0A0A0"
+    android:outlineSpotShadowColor="#A0A0A0"
+    app:cardBackgroundColor="#FDFDFD"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/blueone"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:id="@+id/planCardnutrition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/planNutritionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="95dp">
+
+            <TextView
+                android:id="@+id/carbsValuePlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120g"
+                android:textColor="#424242"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView18"
+                app:layout_constraintStart_toEndOf="@+id/textView18"
+                app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/caloriesValuePlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="0kcal"
+                android:textColor="#424242"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintStart_toEndOf="@+id/textView15"
+                app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/proteinValuePlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120g"
+                android:textColor="#424242"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                app:layout_constraintStart_toEndOf="@+id/textView20"
+                app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+            <TextView
+                android:id="@+id/fatsValuePlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120g"
+                android:textColor="#424242"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                app:layout_constraintStart_toEndOf="@+id/textView22"
+                app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Carbohidratos:  "
+                android:textColor="#C8C8C8"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/textView15"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Gorduras:  "
+                android:textColor="#C8C8C8"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/proteinValuePlan"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Proteinas:  "
+                android:textColor="#C8C8C8"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/carbsValuePlan"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Calorias : "
+                android:textColor="#C8C8C8"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/planFoodName"
+                app:layout_constraintTop_toBottomOf="@+id/planFoodName" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deleteFood"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="#00F6F6F6"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/imageView23nutrition"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:alpha="0.7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/trash" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dragIconnutrition"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:outlineAmbientShadowColor="#FF00A4FF"
+                android:outlineSpotShadowColor="#FF00A4FF"
+                app:cardBackgroundColor="#8AE6A1"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/planFoodName"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Dumbell Curls"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

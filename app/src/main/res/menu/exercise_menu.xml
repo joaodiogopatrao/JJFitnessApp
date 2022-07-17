@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_todos"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="Os meus planos" />
+    <item
+        android:id="@+id/ic_pesquisar"
+        android:icon="@drawable/star48"
+        android:title="Procurar planos"/>
+
+
+</menu>

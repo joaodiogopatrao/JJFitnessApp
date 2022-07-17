@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/firstPageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.IntroducaoFragments.FirstPageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.03"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.035"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/usernameText" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNameInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:visibility="visible"
+                app:boxBackgroundColor="#00777777"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxStrokeColor="#000000"
+                app:boxStrokeWidth="0.5dp"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/blueone"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view10"
+                app:layout_constraintWidth_percent="0.4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/firstNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Primeiro Nome"
+                    android:singleLine="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dayInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:visibility="visible"
+                app:boxBackgroundColor="#00777777"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxStrokeColor="#000000"
+                app:boxStrokeWidth="0.5dp"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/blueone"
+                app:layout_constraintEnd_toStartOf="@+id/monthInput"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameInput"
+                app:layout_constraintWidth_percent="0.27">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dayEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Dia"
+                    android:inputType="numberSigned"
+                    android:singleLine="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/monthInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:visibility="visible"
+                app:boxBackgroundColor="#00777777"
+                app:boxStrokeColor="#000000"
+                app:boxStrokeWidth="0.5dp"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/blueone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameInput"
+                app:layout_constraintWidth_percent="0.27">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/monthEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Mês"
+                    android:inputType="numberSigned"
+                    android:singleLine="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/yearInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:visibility="visible"
+                app:boxBackgroundColor="#00777777"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxStrokeColor="#000000"
+                app:boxStrokeWidth="0.5dp"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/blueone"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintStart_toEndOf="@+id/monthInput"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameInput"
+                app:layout_constraintWidth_percent="0.27">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/yearEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Ano"
+                    android:inputType="numberSigned"
+                    android:singleLine="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameInput"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:theme="@style/TextInputLayoutAppearance"
+                android:visibility="visible"
+                app:boxBackgroundColor="#00FFFFFF"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxStrokeColor="#000000"
+                app:boxStrokeWidth="0.5dp"
+                app:expandedHintEnabled="false"
+                app:hintTextColor="@color/blueone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.09"
+                app:layout_constraintTop_toTopOf="@+id/view10"
+                app:layout_constraintWidth_percent="0.4">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lastNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Ultimo Nome"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
+                android:src="@mipmap/firstpageimage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Bem Vindo,"
+                android:textColor="#636363"
+                android:textSize="20sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintHeight_percent="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Username"
+                android:textColor="@color/blueone"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintHeight_percent="0.07"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Agradecemos a sua preferencia pela nossa aplicação!  Antes de de começar a usa-la vamos precisar de alguns dados...que tal começar pelo seu primeiro e último nome"
+                android:textAlignment="viewStart"
+                android:textColor="#636363"
+                android:textSize="15sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="1sp"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintHeight_percent="0.14"
+                app:layout_constraintHorizontal_weight="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view6"
+                app:layout_constraintVertical_weight="0.2"
+                app:layout_constraintWidth_percent="0.8" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+            <com.sackcentury.shinebuttonlib.ShineButton
+                android:id="@+id/firstPageButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@android:color/darker_gray"
+                app:allow_random_color="false"
+                app:big_shine_color="@color/blueone"
+                app:btn_color="@color/blueone"
+                app:btn_fill_color="@color/blueone"
+                app:click_animation_duration="200"
+                app:enable_flashing="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shine_animation_duration="1500"
+                app:shine_count="8"
+                app:shine_turn_angle="10"
+                app:siShape="@drawable/ic_action_name"
+                app:small_shine_color="#CC9999"
+                app:small_shine_offset_angle="20" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.JJFitnessApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/darkgrey</item>
+        <item name="colorPrimaryVariant">@color/darkgrey</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">@color/teal_700</item>
+        <item name="colorControlHighlight">@color/teal_700</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="HintTextStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/teal_200</item>
+    </style>
+    <style name="TextInputLayoutAppearance" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="android:textColor">@color/lightgreytwo</item>
+        <item name="android:textColorHint">@color/lightgreytwo</item>
+        <item name="colorControlNormal">@color/lightgreytwo</item>
+        <item name="colorControlActivated">@color/lightgreytwo</item>
+        <item name="colorControlHighlight">@color/lightgreytwo</item>
+    </style>
+    <style name="TextInputLayoutAppearanceSearch" parent="Widget.Design.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="boxStrokeColor">#000000</item>
+        <item name="boxStrokeWidth">1.5dp</item>
+    </style>
+    <style name="BottomSheetStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="behavior_draggable">false</item>
+    </style>
+    <style name= "BottomSheetDialogTheme" parent = "Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="behavior_draggable">true</item>
+    </style>
+
+    <style name="MyDatePicker" >
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Divider color -->
+        <item name="colorControlNormal">@color/lightgreen</item>
+    </style>
+    <style name="CustomText">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/montserratres</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

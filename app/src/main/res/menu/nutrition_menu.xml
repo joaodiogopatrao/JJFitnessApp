@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ic_calculadoras"
+        android:icon="@mipmap/calculator48"
+        android:title="Calculadoras" />
+    <item
+        android:id="@+id/ic_planos"
+        android:icon="@mipmap/planner48"
+        android:title="Planos"/>
+    <item
+        android:id="@+id/ic_desafiosNutrition"
+        android:icon="@drawable/climbing48"
+        android:title="Desafios"/>
+
+
+</menu>

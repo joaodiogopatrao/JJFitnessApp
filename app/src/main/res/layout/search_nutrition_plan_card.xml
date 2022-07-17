@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foodCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="7dp"
+    android:outlineAmbientShadowColor="#A0A0A0"
+    android:outlineSpotShadowColor="#A0A0A0"
+    app:cardBackgroundColor="#FDFDFD"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/searchPlanCardNutrition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchPlanNutritionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView30nutrition"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="15dp"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/searchdragIconnutrition"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/bmiarrow" />
+
+            <TextView
+                android:id="@+id/foodLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="9"
+                android:textAlignment="center"
+                android:textColor="#3E3E3E"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/planLikeFood"
+                app:layout_constraintEnd_toStartOf="@+id/planLikeFood"
+                app:layout_constraintTop_toTopOf="@+id/planLikeFood" />
+
+            <TextView
+                android:id="@+id/planCreatorUsernameNutrition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criado por: username"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/searchplanFoodName"
+                app:layout_constraintStart_toStartOf="@+id/searchplanFoodName"
+                app:layout_constraintTop_toBottomOf="@+id/searchplanFoodName" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/planLikeFood"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/planDeleteFood"
+                app:layout_constraintTop_toTopOf="parent">>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/heartFillNutrition"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/heart64" />
+
+                    <ImageView
+                        android:id="@+id/searchimageView23nutrition"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/favorite64" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/planDeleteFood"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="13dp"
+                android:alpha="9.7"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView30nutrition"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/searchimageView230nutrition"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/trash" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchdragIconnutrition"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:outlineAmbientShadowColor="#FF00A4FF"
+                android:outlineSpotShadowColor="#FF00A4FF"
+                app:cardBackgroundColor="#8AE6A1"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/searchplanFoodName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="13dp"
+                android:text="Dumbell Curls"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchPlanFoodContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1.05"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nestedScrollViewnutrition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/mondayLayoutNutrition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view31nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView46nutrition"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView46nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view32nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView46nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textView46nutrition"
+                                    app:layout_constraintTop_toTopOf="@+id/textView46nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView46nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Segunda-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/MondayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layoutManager="LinearLayoutManager"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView46nutrition"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="visible" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/tuesdayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view12nutrition"
+                                    android:layout_width="126dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView47nutrition"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView47nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view30nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView47nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView47nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView47nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Terça-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/tuesdayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView47nutrition"
+                                    tools:itemCount="6"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/wednesdayLayoutNutrition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view35nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView57nutrition"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView57nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view36nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView57nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView57nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView57nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Quarta-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/wednesdayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView57nutrition"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/thursdayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view33nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView58nutrition"
+                                    app:layout_constraintEnd_toStartOf="@+id/textView58nutrition"
+                                    app:layout_constraintTop_toTopOf="@+id/textView58nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view34nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView58nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView58nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView58nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Quinta-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/thursdayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView58nutrition"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/fridayLayoutNutrition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view37nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView59nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView59nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view38nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView59nutrition"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView59nutrition"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView59nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Sexta-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/fridayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView59nutrition"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/saturdayLayoutNutrition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view40nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView60nutrition"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView60nutrition"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <View
+                                    android:id="@+id/view39nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView60nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView60nutrition"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <TextView
+                                    android:id="@+id/textView60nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Sábado"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/saturdayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView60nutrition"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/sundayLayoutNutrition"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view44nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView61nutrition"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView61nutrition"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <View
+                                    android:id="@+id/view41nutrition"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView61nutrition"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView61nutrition"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <TextView
+                                    android:id="@+id/textView61nutrition"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Domingo"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/sundayRecyclerNutrition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="1.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView61nutrition"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

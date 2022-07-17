@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBFBFB"
+    tools:context=".ui.fragments.PlanSearchFragment">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/backarrowblue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="#FBFBFB"
+        app:abb_badgeBackgroundColor="@color/neonblue"
+        app:abb_badgeTextColor="@color/neonblue"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorColor="#454545"
+        app:abb_indicatorHeight="4dp"
+        app:abb_indicatorLocation="bottom"
+        app:abb_indicatorMargin="16dp"
+        app:abb_selectedIndex="0"
+        app:abb_selectedTabType="text"
+        app:abb_tabColor="#9A9A9A"
+        app:abb_tabColorDisabled="@color/lightgreen"
+        app:abb_tabColorSelected="#454545"
+        app:abb_tabs="@menu/exercise_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        tools:abb_tabColorDisabled="#FA2828">
+
+    </nl.joery.animatedbottombar.AnimatedBottomBar>
+</androidx.constraintlayout.widget.ConstraintLayout>

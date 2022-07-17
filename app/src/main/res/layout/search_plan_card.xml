@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exerciseCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="7dp"
+    android:outlineAmbientShadowColor="#A0A0A0"
+    android:outlineSpotShadowColor="#A0A0A0"
+    app:cardBackgroundColor="#FDFDFD"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:id="@+id/searchPlanCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchPlanExerciseHeader"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView30"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="15dp"
+                android:rotation="180"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/searchdragIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/bmiarrow" />
+
+            <TextView
+                android:id="@+id/exerciseLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="9"
+                android:textAlignment="center"
+                android:textColor="#3E3E3E"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/planLikeExercise"
+                app:layout_constraintEnd_toStartOf="@+id/planLikeExercise"
+                app:layout_constraintTop_toTopOf="@+id/planLikeExercise" />
+
+            <TextView
+                android:id="@+id/planCreatorUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Criado por: username"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@+id/searchplanExerciseName"
+                app:layout_constraintStart_toStartOf="@+id/searchplanExerciseName"
+                app:layout_constraintTop_toBottomOf="@+id/searchplanExerciseName" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/planLikeExercise"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/planDeleteExercise"
+                app:layout_constraintTop_toTopOf="parent">>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/heartFill"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/heart64" />
+
+                    <ImageView
+                        android:id="@+id/searchimageView23"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/favorite64" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/planDeleteExercise"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="13dp"
+                android:alpha="9.7"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView30"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/searchimageView230"
+                        android:layout_width="20dp"
+                        android:layout_height="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/trash" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/searchdragIcon"
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:outlineAmbientShadowColor="#FF00A4FF"
+                android:outlineSpotShadowColor="#FF00A4FF"
+                app:cardBackgroundColor="@color/neonblue"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/searchplanExerciseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="13dp"
+                android:text="Dumbell Curls"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchPlanExerciseContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1.05"
+                app:cardBackgroundColor="#FDFDFD"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/nestedScrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/mondayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view31"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView46"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView46"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view32"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView46"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/textView46"
+                                    app:layout_constraintTop_toTopOf="@+id/textView46"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView46"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Segunda-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/SearchMondayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layoutManager="LinearLayoutManager"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView46"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="visible" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/tuesdayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view12"
+                                    android:layout_width="126dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView47"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView47"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view30"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView47"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView47"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView47"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Terça-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/tuesdayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView47"
+                                    tools:itemCount="6"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/wednesdayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view35"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView57"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView57"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view36"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView57"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView57"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView57"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Quarta-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/wednesdayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView57"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/thursdayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view33"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="15dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView58"
+                                    app:layout_constraintEnd_toStartOf="@+id/textView58"
+                                    app:layout_constraintTop_toTopOf="@+id/textView58"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view34"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView58"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView58"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView58"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Quinta-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/thursdayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView58"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/fridayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view37"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView59"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView59"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <View
+                                    android:id="@+id/view38"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView59"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView59"
+                                    app:layout_constraintWidth_percent="0.3" />
+
+                                <TextView
+                                    android:id="@+id/textView59"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Sexta-feira"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/fridayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView59"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/saturdayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view40"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView60"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView60"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <View
+                                    android:id="@+id/view39"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView60"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView60"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <TextView
+                                    android:id="@+id/textView60"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Sábado"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/saturdayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView60"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/sundayLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <View
+                                    android:id="@+id/view44"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginEnd="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView61"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView61"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <View
+                                    android:id="@+id/view41"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginStart="20dp"
+                                    android:background="@color/blueone"
+                                    android:elevation="1dp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/textView61"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/textView61"
+                                    app:layout_constraintWidth_percent="0.33" />
+
+                                <TextView
+                                    android:id="@+id/textView61"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="Domingo"
+                                    android:textColor="#7C7C7C"
+                                    android:textSize="18sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/sundayRecycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:item_layout="@layout/plan_cards_layout"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="1.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/textView61"
+                                    tools:itemCount="4"
+                                    tools:listitem="@layout/plan_cards_layout"
+                                    tools:visibility="gone" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

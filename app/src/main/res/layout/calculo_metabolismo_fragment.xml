@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/backgroundimc"
+    tools:context=".ui.testfragments.CalculoMetabolismoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.05">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.95">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nivelAtividadeConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/alturaConstraint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.12"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ativLigeiraButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_percent="0.56"
+                        app:layout_constraintStart_toEndOf="@+id/sedentarioButton"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintWidth_percent="0.22">
+
+                        <ImageView
+                            android:id="@+id/ativLigeiraBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1"
+                            android:visibility="invisible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ativLigeiraIconWhite"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="1"
+                                android:src="@mipmap/walkingiconwhite"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.4"
+                                app:srcCompat="@mipmap/walkingiconwhite" />
+
+                            <ImageView
+                                android:id="@+id/ativLigeiraIcon"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="0.4"
+                                android:src="@mipmap/walkingicon"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.4"
+                                app:srcCompat="@mipmap/walkingicon" />
+
+                            <TextView
+                                android:id="@+id/ativLigeiraText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="Ligeira"
+                                android:textAlignment="center"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.7" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/sedentarioButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_percent="0.56"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintWidth_percent="0.22">
+
+                        <ImageView
+                            android:id="@+id/sedentarioBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1"
+                            android:visibility="invisible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/sedentarioIconWhite"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:alpha="1"
+                                android:src="@mipmap/sedentaryiconwhite"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.35" />
+
+                            <ImageView
+                                android:id="@+id/sedentarioIcon"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:alpha="0.4"
+                                android:src="@mipmap/sedentaryicon"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.35" />
+
+
+                            <TextView
+                                android:id="@+id/sedentarioText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="Sedentário"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ativModeradaButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHeight_percent="0.56"
+                        app:layout_constraintStart_toEndOf="@+id/ativLigeiraButton"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintWidth_percent="0.22">
+
+                        <ImageView
+                            android:id="@+id/ativModeradaBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1"
+                            android:visibility="invisible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ativModeradaIconWhite"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="1"
+                                android:src="@mipmap/runningiconwhite"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.3"
+                                app:srcCompat="@mipmap/runningiconwhite" />
+
+                            <ImageView
+                                android:id="@+id/ativModeradaIcon"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="0.4"
+                                android:src="@mipmap/runningicon"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.3"
+                                app:srcCompat="@mipmap/runningicon" />
+
+                            <TextView
+                                android:id="@+id/ativModeradaText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="Moderada"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ativIntensaButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.56"
+                        app:layout_constraintStart_toEndOf="@+id/ativModeradaButton"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintWidth_percent="0.22">
+
+                        <ImageView
+                            android:id="@+id/ativIntensaBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1"
+                            android:visibility="invisible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/ativIntensaIconWhite"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="1"
+                                android:src="@mipmap/weighticonwhite"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.3"
+                                app:srcCompat="@mipmap/weighticonwhite" />
+
+                            <ImageView
+                                android:id="@+id/ativIntensaIcon"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="0.4"
+                                android:src="@mipmap/weighticon"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0.4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.3"
+                                app:srcCompat="@mipmap/weighticon" />
+
+                            <TextView
+                                android:id="@+id/ativIntensaText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="Intensa"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nível de atividade física"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/generoConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/nivelAtividadeConstraint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.10"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Escolha o seu género"
+                        app:layout_constraintBottom_toTopOf="@+id/maleButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/maleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardBackgroundColor="#FFF8F8F8"
+                        app:cardCornerRadius="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/view4"
+                        app:layout_constraintHeight_percent="0.56"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.35">
+
+                        <ImageView
+                            android:id="@+id/maleButtonBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1"
+                            android:visibility="invisible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:layout_editor_absoluteX="41dp"
+                            tools:layout_editor_absoluteY="82dp"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/imageView13"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@mipmap/malesymb1"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHeight_percent="0.6"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.3" />
+
+                            <ImageView
+                                android:id="@+id/blackMaleSymbol"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="10dp"
+                                android:alpha="0.4"
+                                android:src="@mipmap/malesymbblack"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHeight_percent="0.6"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.3" />
+
+                            <TextView
+                                android:id="@+id/maleText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="15dp"
+                                android:text="Homem"
+                                android:textAlignment="center"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/femaleButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.56"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/view4"
+                        app:layout_constraintWidth_percent="0.35">
+
+                        <ImageView
+                            android:id="@+id/femaleButtonBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1"
+                            android:visibility="invisible" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:backgroundTint="#F8F8F8"
+                            tools:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="10dp"
+                                android:src="@mipmap/femalesymb"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHeight_percent="0.7"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.3" />
+
+                            <ImageView
+                                android:id="@+id/blackFemaleSymbol"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="10dp"
+                                android:alpha="0.4"
+                                android:src="@mipmap/femalesymbblack"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHeight_percent="0.7"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.3" />
+
+                            <TextView
+                                android:id="@+id/femaleText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="20dp"
+                                android:text="Mulher"
+                                android:textAlignment="center"
+                                android:textColor="#737373"
+                                android:textSize="16sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/alturaConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:backgroundTint="#FFFFFF"
+                    app:layout_constraintBottom_toTopOf="@+id/pesoConstraint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.12"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Indique a sua altura"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/heightSeekBar"
+                        style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:max="120"
+                        android:progress="60"
+                        android:progressBackgroundTint="#E5E5E5"
+                        android:progressTint="#79B9CB"
+                        android:thumbTint="#79B9CB"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.7" />
+
+                    <TextView
+                        android:id="@+id/heightText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="182cm"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toTopOf="@+id/heightSeekBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pesoConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/idadeConstraint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.12"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Indique o seu peso"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/weightText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="70kg"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toTopOf="@+id/weightSeekBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <SeekBar
+                        android:id="@+id/weightSeekBar"
+                        style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:max="10"
+                        android:progress="3"
+                        android:progressBackgroundTint="#E5E5E5"
+                        android:progressTint="#79B9CB"
+                        android:thumbTint="#79B9CB"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.7" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dadosConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="16dp"
+                    android:alpha="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/calcularButton"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:alpha="1"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                        app:cardBackgroundColor="#B6B6B6"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imageView7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.3"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstract1" />
+
+                        <ImageView
+                            android:id="@+id/imageView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/playicon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/resultsCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:alpha="0"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.70"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.9">
+
+                        <ImageView
+                            android:id="@+id/imageView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.4"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/abstractback" />
+
+                        <ImageView
+                            android:id="@+id/imageView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:alpha="0.6"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/altbackground" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView26"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Taxa metabólica"
+                                app:layout_constraintBottom_toTopOf="@+id/tmGainProgressBar"
+                                app:layout_constraintEnd_toEndOf="@+id/tmGainProgressBar"
+                                app:layout_constraintStart_toStartOf="@+id/tmGainProgressBar" />
+
+                            <TextView
+                                android:id="@+id/textView24"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Taxa metabólica basal"
+                                app:layout_constraintBottom_toTopOf="@+id/tmbProgressBar"
+                                app:layout_constraintEnd_toEndOf="@+id/tmbProgressBar"
+                                app:layout_constraintStart_toStartOf="@+id/tmbProgressBar"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.97" />
+
+                            <TextView
+                                android:id="@+id/tmbText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="32dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="2100"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toTopOf="@+id/tmText"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.333"
+                                app:layout_constraintStart_toEndOf="@+id/tmbProgressBar"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.026" />
+
+                            <TextView
+                                android:id="@+id/tmText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="112dp"
+                                android:fontFamily="sans-serif-light"
+                                android:text="2450"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.333"
+                                app:layout_constraintStart_toEndOf="@+id/tmGainProgressBar" />
+
+                            <ProgressBar
+                                android:id="@+id/tmGainProgressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="10dp"
+                                android:max="4000"
+                                android:progress="3000"
+                                android:progressDrawable="@drawable/progress_bar_drawable_gain"
+                                app:layout_constraintBottom_toBottomOf="@+id/tmProgressBar"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.7" />
+
+                            <ProgressBar
+                                android:id="@+id/tmProgressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginBottom="112dp"
+                                android:max="4000"
+                                android:progress="2000"
+                                android:progressDrawable="@drawable/progress_bar_drawable_result"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.7" />
+
+                            <ProgressBar
+                                android:id="@+id/tmbProgressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="20dp"
+                                android:max="4000"
+                                android:progress="2000"
+                                android:progressDrawable="@drawable/progress_bar_drawable"
+                                app:layout_constraintBottom_toTopOf="@+id/textView26"
+                                app:layout_constraintHeight_percent="0.1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintWidth_percent="0.7" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/restartButton"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:clickable="true"
+                                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                                app:cardCornerRadius="40dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHeight_percent="0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tmGainProgressBar"
+                                app:layout_constraintWidth_percent="0">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView16"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginStart="10dp"
+                                        android:alpha="0.5"
+                                        android:src="@mipmap/restarticon"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintHeight_percent="0.6"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintWidth_percent="0.3" />
+
+                                    <TextView
+                                        android:id="@+id/textView2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="15dp"
+                                        android:text="Recomeçar"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/imageView16"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </androidx.cardview.widget.CardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/idadeConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/dadosConstraint"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.12"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <SeekBar
+                        android:id="@+id/idadeSeekBar"
+                        style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:max="10"
+                        android:progress="3"
+                        android:progressBackgroundTint="#E5E5E5"
+                        android:progressTint="#79B9CB"
+                        android:thumbTint="#79B9CB"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintWidth_percent="0.7" />
+
+
+                    <TextView
+                        android:id="@+id/ageText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:text="20"
+                        android:textSize="40sp"
+                        app:layout_constraintBottom_toTopOf="@+id/idadeSeekBar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Indique a sua idade"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
